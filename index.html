@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#05030f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<meta name="app-version" content="1.0">
+<title>¡Boom! 3D</title>
+<script>window.onerror=function(m,u,l,c,e){var d=document.getElementById('errBoom');if(!d){d=document.createElement('div');d.id='errBoom';d.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#c00;color:#fff;font:12px monospace;padding:6px;white-space:pre-wrap;max-height:40%;overflow:auto';(document.body||document.documentElement).appendChild(d);}d.textContent+='Error: '+m+' ('+String(u||'').split('/').pop()+':'+l+')\n';};</script>
+<link rel="stylesheet" href="assets/app.css">
+<style>.mver{font-size:15px!important;font-weight:900!important;color:#ffd23a!important;opacity:1!important}#loading{transition:opacity .2s}</style>
+</head>
+<body>
+<div id="app">
+  <canvas id="c3d"></canvas>
+  <div id="touch"></div>
+  <div id="stage2d"><div id="stageBox"></div></div>
+  <div id="panel"><div id="panelBox"></div></div>
+  <div id="hud">
+    <div id="joy"><div id="joyKnob"></div></div>
+    <div id="vidas" class="ui"></div>
+    <div id="hashtag"></div>
+    <div id="bubble" class="hidden"><b>El Presentador</b><span></span></div>
+    <div id="lower3" class="hidden"></div>
+    <div id="credits" class="hidden"><div id="creditsRoll"></div></div>
+    <div id="toast" class="hidden"></div>
+    <div id="topbar" class="ui">
+      <button id="btnMenu" title="Menú">☰</button>
+      <button id="btnCam" title="Cámara">👁</button>
+      <button id="btnLuces" title="Luces">💡</button>
+      <button id="btnSkip" class="hidden">Saltar ⏭</button>
+    </div>
+    <div id="hint" class="hidden"></div>
+    <div id="actions" class="ui"></div>
+  </div>
+  <div id="menu"></div>
+  <div id="classicWrap" class="hidden"><iframe id="classic" allow="autoplay"></iframe><button id="classicBack" class="ui">⟵ Menú</button></div>
+  <div id="loading"><div class="spin"></div><p>¡Boom!</p></div>
+  <div id="rotate">Gira el móvil 📱↻</div>
+  <input id="kb" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" enterkeyhint="done" aria-label="Escribe las letras">
+</div>
+<script src="sb3/logo.js?v=1.0"></script>
+<script>
+window.__LANG = 'es'; window.__LOGO_LOCAL = window.__logoUrl('es');
+</script>
+<script src="js/boom_voz.js?v=1.0"></script>
+<script src="js/boom3d.js?v=1.0"></script>
+<script src="js/app.js?v=1.0"></script>
+</body>
+</html>

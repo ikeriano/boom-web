@@ -1,0 +1,39 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="app-version" content="1.0"><title>¡Boom! clásico</title>
+<style>
+@font-face{font-family:Digital;src:local('Courier New')}
+@font-face{font-family:Myriad;src:local('Arial Bold')}
+@font-face{font-family:MyriadC;src:local('Arial Narrow')}
+html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:Myriad,Arial,sans-serif;color:#fff;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+#ph{position:absolute;left:50%;top:50%;width:360px;height:640px;-webkit-transform-origin:0 0;transform-origin:0 0;overflow:hidden;background:#000}
+.scr{position:absolute;top:0;left:0;width:100%;height:100%;background-size:100% 100%;display:none}
+.on{display:block}
+.btn{position:absolute;background-size:100% 100%;border:0;color:#fff;font-family:Myriad,Arial;font-size:22px;text-shadow:0 2px 2px #000;cursor:pointer;background-color:transparent;padding:0}
+.lbl{position:absolute;left:0;width:100%;text-align:center}
+.dig{font-family:Digital,'Courier New',monospace;color:#ff2a2a;text-shadow:0 0 8px #f00}
+#hdr{position:absolute;top:0;left:0;width:360px;height:44px;background:url(img/game_header_bg.png);background-size:100% 100%}
+#bank{position:absolute;left:115px;top:2px;width:130px;height:42px;background:url(img/game_bank.png);background-size:100% 100%;text-align:center}
+#bank b{display:block;font-size:10px;padding-top:2px;color:#ccc}#bank span{font-size:18px}
+.ans{position:absolute;width:160px;height:38px;background-size:100% 100%;font-size:14px;line-height:38px;text-align:center;font-family:MyriadC,Myriad,Arial;overflow:hidden;white-space:nowrap}
+.ans.cut{opacity:.45}.ans.ok{background-image:url(img/answerFrame_green.png)!important}.ans.bad{background-image:url(img/answerFrame_red.png)!important}
+#q{position:absolute;left:8px;top:50px;width:344px;height:84px;background:url(img/prompt_bg.png);background-size:100% 100%;font-size:17px;display:table}
+#q div{display:table-cell;vertical-align:middle;text-align:center;padding:0 14px}
+#amt{position:absolute;left:115px;top:138px;width:130px;height:40px;background:url(img/game_amount.png);background-size:100% 100%;text-align:center;line-height:42px;font-size:22px}
+#bomb{position:absolute;left:70px;width:220px;height:228px;background-size:100% 100%}
+#btime{position:absolute;width:120px;left:50px;top:70px;text-align:center;font-size:30px}
+#bnum{position:absolute;width:100%;top:118px;text-align:center;font-size:44px;color:#ddd;font-family:Myriad}
+#cut{position:absolute;width:100%;text-align:center;font-size:13px;color:#9cf}
+#wires{position:absolute;left:0;top:0;width:360px;height:640px;pointer-events:none}
+#slime{position:absolute;left:0;top:0;width:100%;height:100%;display:none;overflow:hidden}
+#slime i{position:absolute;background:url(img/ooze_green.png);background-size:100% 100%;width:700px;height:700px;-webkit-transition:-webkit-transform .5s;transition:transform .5s}
+#slime p{position:absolute;width:100%;text-align:center;top:250px;font-size:46px;color:#ff3;text-shadow:0 3px 6px #000}
+.row7{position:absolute;left:4px;width:352px;height:90px}
+.rb{position:absolute;width:44px;height:47px;background-size:100% 100%;text-align:center}
+.rb span{display:block;padding-top:12px;font-size:20px}.rb em{display:block;font-style:normal;font-size:12px;margin-top:10px}
+.lst{position:absolute;left:20px;top:110px;width:320px;font-size:16px}.lst div{padding:8px;border-bottom:1px solid #fff3;overflow:hidden}.lst span{float:right;color:#ffd23a}
+#err{position:fixed;left:0;right:0;bottom:0;background:#c00;color:#fff;font:12px monospace;padding:6px;z-index:99;display:none;white-space:pre-wrap}
+</style></head><body>
+<div id="ph"></div><div id="err"></div>
+<script>window.onerror=function(m,u,l){var e=document.getElementById('err');e.style.display='block';e.textContent+='Error: '+m+' ('+(u||'').split('/').pop()+':'+l+')\n';};</script>
+<script src="compat.js"></script><script src="textos.js"></script><script src="juego.js"></script>
+</body></html>
